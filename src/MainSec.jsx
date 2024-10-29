@@ -28,7 +28,7 @@ export function MainSec() {
     }
 
     const nav = navItems.map((item, index) => {
-        return <li onClick={() =>(handleNavigation(index))} className='hover:font-bold text-xl font-poiret p-4 rounded hover:cursor-pointer mr-4 hover:animate-pulse inline' key={index}>{item}</li>
+        return <li onClick={() => (handleNavigation(index))} className='hover:font-bold text-xl font-poiret p-4 rounded hover:cursor-pointer mr-4 hover:animate-pulse inline' key={index}>{item}</li>
 
     })
 
@@ -100,19 +100,19 @@ export function MainSec() {
         document.body.removeChild(link);
     }
 
-    
+
 
     return (
         <>
-        <div className="sticky flex flex-row items-center justify-evenly top-0 w-screen h-[12vh] bg-black text-white transition-all ease-linear duration-300 hover:bg-white hover:text-black z-10">
-            <ul>
-                {nav}
-            </ul>
-            <button onClick={handleCvDownload} class="transform ease-in-out duration-300 hover:bg-black hover:text-white border rounded-xl font-bold py-2 px-4 inline-flex items-center">
-                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
-                <span>Descargar CV</span>
-            </button>
-        </div>
+            <div className="sticky flex flex-row items-center justify-evenly top-0 w-screen h-[12vh] bg-black text-white transition-all ease-linear duration-300 hover:bg-white hover:text-black z-10">
+                <ul>
+                    {nav}
+                </ul>
+                <button onClick={handleCvDownload} class="transform ease-in-out duration-300 hover:bg-black hover:text-white border rounded-xl font-bold py-2 px-4 inline-flex items-center">
+                    <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                    <span>Descargar CV</span>
+                </button>
+            </div>
             <div className="flex flex-col bg-indigo-900">
                 <ParticlesBackground />
                 <div className="flex flex-col items-center" ref={aboutMeRef}>
@@ -121,31 +121,28 @@ export function MainSec() {
                             <img src="./JJ.PNG" alt="" className='w-64 h-64 rounded-full object-contain mx-6 z-10 shadow-2xl' />
                             <h1 className={'font-poiret text-6xl text-white font-bold mt-6 text-start transform transition-all duration-1000 ease-in-out ' + `${isVisible1 ? 'translate-y-0 opacity-100' : '-translate-y-64 opacity-0'}`}>Juan José Gil Calle</h1>
                             <h2 className={'font-poiret text-4xl text-white font-bold mt-6 text-start mx-6 transform transition-all duration-1000 ease-in-out ' + `${isVisible2 ? 'translate-y-0 opacity-100' : '-translate-y-64 opacity-0'}`}>
-                            <TypeAnimation
-                        sequence={[
-                            // Same substring at the start will only be typed out once, initially
-                            'Junior backend engineer',
-                            1000, // wait 1s before replacing "Mice" with "Hamsters"
-                            'Junior software engineer',
-                            1000,
-                            'Fullstack developer',
-                            1000,
-                            'Java developer',
-                            1000
-                        ]}
-                        wrapper="span"
-                        speed={50}
-                        style={{ display: 'inline-block' }}
-                        repeat={Infinity}
-                        />
-                                </h2>
-                            <p className={'font-poiret lg:w-5/6 2xl:w-2/3 text-2xl text-white mt-4 text-start mx-6 transform transition-all duration-1000 ease-in-out ' + `${isVisible3 ? 'translate-x-0 opacity-100' : '-translate-x-64 opacity-0'}`}>Soy un ingeniero informático graduado por la Universidad de Cádiz con mención en Tecnologías de la Información. Estoy centrado en tareas enfocadas al desarrollo de aplicaciones web y al desarrollo software. Me gusta lo que hago y estoy en constante aprendizaje. Actualmente busco oportunidades laborales para crecer profesionalmente.</p>
-                            <div className={'flex flex-row gap-4 mt-6 mx-8 transform transition-all duration-1000 ease-in-out ' + `${isVisible3 ? ' translate-x-0 opacity-100' : '-translate-x-64 opacity-0'}`}>
-                                <button onClick={() => {contactRef.current.scrollIntoView({behavior: 'smooth'})}} className='text-white font-quicksand text-xl px-4 py-2 border rounded-xl hover:bg-black hover:border-black transform ease-in-out duration-500'>¡Contacta conmigo!</button>
-                            </div>
+                                <TypeAnimation
+                                    sequence={[
+                                        // Same substring at the start will only be typed out once, initially
+                                        'Junior backend engineer',
+                                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                                        'Junior software engineer',
+                                        1000,
+                                        'Fullstack developer',
+                                        1000,
+                                        'Java developer',
+                                        1000
+                                    ]}
+                                    wrapper="span"
+                                    speed={50}
+                                    style={{ display: 'inline-block' }}
+                                    repeat={Infinity}
+                                />
+                            </h2>
+                            <p className={'font-poiret lg:w-5/6 2xl:w-2/3 text-2xl text-white my-4 text-start mx-6 transform transition-all duration-1000 ease-in-out ' + `${isVisible3 ? 'translate-x-0 opacity-100' : '-translate-x-64 opacity-0'}`}>Soy un ingeniero informático graduado por la Universidad de Cádiz con mención en Tecnologías de la Información. Estoy centrado en tareas enfocadas al desarrollo de aplicaciones web y al desarrollo software. Me gusta lo que hago y estoy en constante aprendizaje. Actualmente busco oportunidades laborales para crecer profesionalmente.</p>
                         </div>
                     </div>
-                    <div className="w-screen bg-black flex justify-center p-4 z-[5]" ref={knowledgeRef}>
+                    <div className="w-screen bg-black flex justify-center mt-10 pb-4 z-[5]" ref={knowledgeRef}>
                         <ScrollAnimation animateIn='fadeIn' duration={2}>
                             <div className="w-[80vw] pb-8 flex flex-col items-center">
                                 <div className="w-5/6 mt-12 flex flex-col items-center">
@@ -176,9 +173,9 @@ export function MainSec() {
                     </ScrollAnimation>
                     <div className="w-screen h-[20vh] mt-16 bg-black flex flex-row border-t z-10" ref={contactRef}>
                         <div className="h-full w-1/3 flex flex-col place-content-center border-r">
-                        <a href="https://www.linkedin.com/in/jjgc00/" target='_blank' className='self-center'>
-                            <img src="./linkedin1.svg" className='w-12 h-12 hover:animate-pulse hover:cursor-pointer' alt="" />
-                        </a>
+                            <a href="https://www.linkedin.com/in/jjgc00/" target='_blank' className='self-center'>
+                                <img src="./linkedin1.svg" className='w-12 h-12 hover:animate-pulse hover:cursor-pointer' alt="" />
+                            </a>
                             <p className='text-white font-poiret text-xl  text-center'>jjgc00</p>
                         </div>
                         <div className="h-full w-1/3 flex flex-col place-content-center border-r">
@@ -186,9 +183,9 @@ export function MainSec() {
                             <p className='text-white font-poiret text-xl text-center'>jjgilca@gmail.com</p>
                         </div>
                         <div className="h-full w-1/3 flex flex-col place-content-center">
-                        <a href="https://github.com/juanjo-gc" target='_blank' className='self-center'>
-                            <img src="./github3.svg" className='w-12 h-12 self-center hover:animate-pulse hover:cursor-pointer' alt="" />
-                        </a>
+                            <a href="https://github.com/juanjo-gc" target='_blank' className='self-center'>
+                                <img src="./github3.svg" className='w-12 h-12 self-center hover:animate-pulse hover:cursor-pointer' alt="" />
+                            </a>
                             <p className='text-white font-poiret text-xl text-center'>juanjo<span className='font-Dosis'>-</span>gc</p>
                         </div>
                     </div>

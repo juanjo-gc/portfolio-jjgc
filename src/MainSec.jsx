@@ -140,9 +140,6 @@ export function MainSec() {
                         />
                                 </h2>
                             <p className={'font-poiret lg:w-5/6 2xl:w-2/3 text-2xl text-white mt-4 text-start mx-6 transform transition-all duration-1000 ease-in-out ' + `${isVisible3 ? 'translate-x-0 opacity-100' : '-translate-x-64 opacity-0'}`}>Soy un ingeniero informático graduado por la Universidad de Cádiz con mención en Tecnologías de la Información. Estoy centrado en tareas enfocadas al desarrollo de aplicaciones web y al desarrollo software. Me gusta lo que hago y estoy en constante aprendizaje. Actualmente busco oportunidades laborales para crecer profesionalmente.</p>
-                            <div className={'flex flex-row gap-4 mt-6 mx-8 transform transition-all duration-1000 ease-in-out ' + `${isVisible3 ? ' translate-x-0 opacity-100' : '-translate-x-64 opacity-0'}`}>
-                                <button onClick={() => {contactRef.current.scrollIntoView({behavior: 'smooth'})}} className='text-white font-quicksand text-xl px-4 py-2 border rounded-xl hover:bg-black hover:border-black transform ease-in-out duration-500'>¡Contacta conmigo!</button>
-                            </div>
                         </div>
                     </div>
                     <div className="w-screen bg-black flex justify-center p-4 z-[5]" ref={knowledgeRef}>
